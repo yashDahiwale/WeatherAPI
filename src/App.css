@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+
+.bg {
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.body {
+    /* background-color: rgb(6, 39, 40); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100dvh;
+    color: white;
+    /* background-image: url(bg-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+}
+
+.title {
+    font-family: "Poppins";
+    text-shadow: 1px 1px 5px black;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Box */
+
+.container {
+    position: relative;
+    top: 20px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: min(450px, 90%);
+    background: linear-gradient(-45deg, rgba(36, 0, 128, 0.406), rgba(0, 0, 255, 0.151));
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.714);
+}
+
+/* Input */
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.searchBar {
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 30px;
+    height: 50px;
+    width: max(300px, 70%);
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+    transition: background-color 150ms ease-in-out;
+}
+
+.searchBar:focus-visible {
+    background-color: rgb(236, 233, 253);
+}
+
+.searchBtn {
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 51px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 150ms ease-in-out;
+}
+
+.searchBtn:hover {
+    background-color: rgb(236, 233, 253);
+}
+
+.searchBtn img {
+    height: 25px;
+}
+
+/* Error Massage */
+
+.error {
+    display: none;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Weather Image */
+
+.wImage {
+    height: 200px;
+    margin: 20px 0px;
+}
+
+/* Main Info */
+
+.mainInfo {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temp {
+    font-size: 60px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.city {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+/* More Info */
+
+.moreInfo {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(50px + 1vw);
+    margin-top: 20px;
+}
+
+.icon {
+    height: 40px;
+}
+
+.humidity,
+.wind {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.humidityText,
+.windText {
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+}
+
+.humid,
+.wSpeed {
+    font-size: calc(20px + 1vw);
+    font-size: 25px;
+    font-weight: 300;
+}
+
+@media screen and (width < 425px) {
+
+    .title {
+        font-size: calc(20px + 1vw);
+    }
+
+    .humidity,
+    .wind {
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+    }
+}
+
+@media screen and (width < 475px) {
+
+    .searchBar {
+        width: min(300px, 70%);
+        font-size: 18px;
+    }
+}

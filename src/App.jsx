@@ -15,7 +15,7 @@ import thunderstorm from "./images/icons/thunderstorm.png";
 
 function App() {
   const [cityName, setCityName] = useState("");
-  const apiKey = "API key here";
+  const apiKey = process.env.API_KEY || "API key here";
 
   // Function to check weather.
   async function checkWeather(event) {
@@ -26,7 +26,7 @@ function App() {
     try {
       const response = await axios({
         method: "GET",
-        url: `https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=${process.env.API_KEY}&q=${cityName}`,
+        url: `https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=${apiKey}&q=${cityName}`,
       });
       const data = response.data;
       // console.log(response);

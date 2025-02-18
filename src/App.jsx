@@ -26,7 +26,7 @@ function App() {
     try {
       const response = await axios({
         method: "GET",
-        url: `https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=${apiKey}&q=${cityName}`,
+        url: `https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=${process.env.API_KEY}&q=${cityName}`,
       });
       const data = response.data;
       // console.log(response);

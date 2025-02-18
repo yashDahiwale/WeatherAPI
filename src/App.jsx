@@ -16,6 +16,7 @@ import thunderstorm from "./images/icons/thunderstorm.png";
 function App() {
   const [cityName, setCityName] = useState("");
   const apiKey = process.env.API_KEY || "API key here";
+  console.log(apiKey);
 
   // Function to check weather.
   async function checkWeather(event) {
